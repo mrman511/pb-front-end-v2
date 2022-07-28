@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Banner from './components/Banner';
 import Menu from './components/Menu';
 import Fullpage from './components/FullPage';

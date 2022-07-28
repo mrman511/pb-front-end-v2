@@ -1,13 +1,11 @@
-import React from 'react';
-
+import React from "react";
 import Background from '../images/devsearch.png'
 import Devsearch from '../images/devsearch-mobile.png'
 
 
-export default function Projects(){
-  let iconList = ["python", "pgsql", "netlify"];
+export default function ProjectItem(props) {
 
-  let parsedIconList = iconList.map((icon) => {
+  let parsedIconList = props.iconList.map((icon) => {
     return (
       <div className="icon-container">
         <img src={ require(`../images/${icon}-icon.png`) } alt={icon} className='icon'/>
@@ -16,17 +14,14 @@ export default function Projects(){
   });
 
   
-  
   return (
-    <article className='page' style={{ backgroundImage: "url("+ Background +")" }}>
+    <article className='page' style={{ backgroundImage: "url("+ require(`../images/${props.imagePath}.png`) +")" }}>
       <div className='page shading'>
         <div className='main project'>
           <div className='project-info'>
-            <h5>Dev Search</h5>
+            <h5>{ props.title }</h5>
             <p>
-              Created during Udemy course Python Django - The Complete Course. This project many important Django features
-              such as User Authentication, Admin User, Password Recovery, User Profiles, User Owned Models, 
-              Interacting with Models, Insite messaging. etc
+              { props.description }
             </p>
             <h6>Created Using</h6>
             <div className='project-icons'>
@@ -35,7 +30,7 @@ export default function Projects(){
           </div>
 
           <div className='image-container'>
-            <img src={ Devsearch } alt="" />
+            <img src={ require(`../images/${props.imagePath}-mobile.png`) } alt="" />
           </div>
         </div>
       </div>
