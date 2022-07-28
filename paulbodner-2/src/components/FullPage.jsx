@@ -5,7 +5,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 
 import About from './About';
 import Skills from './Skills';
-import Projects from './Projects';
+import ProjectList from './ProjectList';
 import Contact from './Contact'
 
 export default function Fullpage() {
@@ -21,11 +21,11 @@ export default function Fullpage() {
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
-            <About />
+            <ProjectList />
           </div>
 
           <div className="section">
-            <Projects />
+            <About />
           </div>
 
           <div className="section">
