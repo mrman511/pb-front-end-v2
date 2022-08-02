@@ -1,9 +1,10 @@
 import React from "react";
-import Background from '../images/devsearch.png'
-import Devsearch from '../images/devsearch-mobile.png'
+import { useMediaQuery } from "@mui/material";
 
 
 export default function ProjectItem(props) {
+  const isMobile = useMediaQuery('(min-width:750px)');
+  const mobileBackGround = useMediaQuery('(max-width:650px)');
 
   let parsedIconList = props.iconList.map((icon) => {
     return (
@@ -15,7 +16,7 @@ export default function ProjectItem(props) {
 
   
   return (
-    <article className='page' style={{ backgroundImage: "url("+ require(`../images/${props.imagePath}.png`) +")" }}>
+    <article className='page' style={{ backgroundImage: "url(" + require(`../images/${ props.imagePath }${ mobileBackGround ? '-mobile': ''}.png`) +")" }}>
       <div className='page shading'>
         <div className='main project'>
           <div className='project-info'>
@@ -29,9 +30,9 @@ export default function ProjectItem(props) {
             </div>
           </div>
 
-          <div className='image-container'>
+          { isMobile && <div className='image-container'>
             <img src={ require(`../images/${props.imagePath}-mobile.png`) } alt="" />
-          </div>
+          </div> }
         </div>
       </div>
     </article>

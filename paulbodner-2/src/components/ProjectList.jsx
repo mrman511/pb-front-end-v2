@@ -25,32 +25,42 @@ export default function ProjectList(){
       iconList: ["python", "pgsql", "netlify"]
     }, 
   ];
-
-  function changeProject(num){
-    setShowProject(num);
-    console.log("Change project SHOW: ", showProject)
-  }
-
-  console.log("SHOW: ", showProject)
   
-
+  
   let parsedProjects = projectsData.map((project)=> 
-    <ProjectItem 
-    key={ project.id }
-    title={ project.title }
-    description={ project.description }
-    imagePath={ project.imagePathName }
-    iconList={ project.iconList }
-    />
+  <ProjectItem 
+  key={ project['id'] }
+  title={ project.title }
+  description={ project.description }
+  imagePath={ project.imagePathName }
+  iconList={ project.iconList }
+  />
   )
+  
+    
+    function changeProject(bool){
+      if (bool){
+        if (showProject === (parsedProjects.length - 1)){
+          setShowProject(0)
+        } else {
+          setShowProject(showProject + 1)
+        }
+      } else {
+        if (showProject === 0){
+          setShowProject(parsedProjects.length -1)
+        } else {
+          setShowProject(showProject -1);
+        }
+      }
+    }
   
   return (
     <>
       { parsedProjects[showProject] }
-      <div className='project-switch' id="previous" onClick={() =>{ changeProject(0) } }>
+      <div className='project-switch' id="previous" onClick={() =>{ changeProject(false) } }>
         <img src={ chevron } alt="Next" />
       </div>
-      <div className='project-switch' id="next" onClick={() =>{ changeProject(1) } }>
+      <div className='project-switch' id="next" onClick={() =>{ changeProject(true) } }>
         <img src={ chevron } alt="Previous" />
       </div>
     </>
