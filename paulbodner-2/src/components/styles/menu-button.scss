@@ -1,0 +1,139 @@
+.McButton {
+  $bar-w: 44px;
+  $bar-h: 3px;
+  $bar-color: white;
+  width: $bar-w;
+  height: $bar-w;
+  cursor: pointer;
+  z-index: 2;
+  
+  b {
+    display: block;
+    position: absolute;
+    width: $bar-w;
+    height: $bar-h;
+    background-color: $bar-color;
+    &:nth-child(1) {
+      top: 7.5%;
+    }
+    &:nth-child(2) {
+      top: 10%;
+    }
+    &:nth-child(3) {
+      top: 12.5%;
+    }
+  }
+}
+
+////////////////////////
+//Menu Button Animations
+///////////////////////
+
+
+.McButton-full-enter-active {
+  
+  b {
+    &:nth-child(1) {
+      top: 10%;
+      transform: rotate(45deg);
+      transition: top 500ms ease-in, transform 500ms ease-out ;
+    }
+    &:nth-child(2) {
+      top: 10%;
+      opacity: 0;
+      transition: opacity 500ms linear;
+    }
+    &:nth-child(3) {
+      top: 10%;
+      transform: rotate(135deg);
+      transition: top 500ms ease-in, transform 500ms ease-out ;
+    }
+  }
+}
+
+
+.McButton-full-enter-done {
+ 
+  b {
+    &:nth-child(1) {
+      top: 10%;
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      top: 10%;
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      top: 10%;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+
+.McButton-full-exit {
+  
+  b {
+    &:nth-child(1) {
+      top: 10%;
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      top: 10%;
+    }
+    &:nth-child(3) {
+      top: 10%;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.McButton-full-exit-active {
+
+  b {
+    &:nth-child(1) {
+      top: 7.5%;
+      transform: rotate(360deg);
+      transition: top 500ms ease-in, transform 750ms ease-out;
+    }
+    &:nth-child(2) {
+      top: 10%;
+      opacity: 1;
+      transition: opacity 500ms linear;
+    }
+    &:nth-child(3) {
+      top: 12.5%;
+      transform: rotate(360deg);
+      transition: top 500ms ease-in, transform 750ms ease-out;
+    }
+  }
+}
+
+.McButton-full-exit-done {
+
+  b {
+    &:nth-child(1) {
+      top: 7.5%;
+      transform: rotate(0);
+    }
+    &:nth-child(2) {
+      top: 10%;
+      opacity: 1;
+    }
+    &:nth-child(3) {
+      top: 12.5%;
+      transform: rotate(0);
+    }
+  }
+}
+
+//////////////
+//media query
+//////////////
+
+@media only screen and (min-width: 1000px){
+  .McButton {
+    display: none;
+  }
+}
