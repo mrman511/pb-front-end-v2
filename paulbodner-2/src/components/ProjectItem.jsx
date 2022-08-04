@@ -19,7 +19,7 @@ export default function ProjectItem(props) {
     <article className='page' style={{ backgroundImage: "url(" + require(`../images/${ props.imagePath }${ mobileBackGround ? '-mobile': ''}.png`) +")" }}>
       <div className='page shading'>
         <div className='main project'>
-          <div className='project-info'>
+          <div className='info-section'>
             <h5>{ props.title }</h5>
             <p>
               { props.description }

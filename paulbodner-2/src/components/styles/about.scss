@@ -1,0 +1,29 @@
+.me {
+  background-color: #12B3A2;
+  color: #666;
+  
+  
+  .info-section{
+    width: 90%;
+    padding-left: 10%;
+    
+    .animation-container{
+      display: flex;
+      flex-direction: row;
+  
+      h3 {
+        display: block;
+        margin: 0;
+      }
+
+      h2{
+        margin-left: .56em;
+      }
+    }
+
+    h5 {
+      width:300px;
+      line-height: 38px;
+    }
+  }
+}

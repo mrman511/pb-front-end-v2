@@ -16,7 +16,11 @@ export default function Banner(props){
     >
       <nav className="banner">
           <h1 className="logo" >B</h1>
-          <h5 className="title">Paul Bodner Developement</h5>
+          <div className="title">
+            <h1 id="first" className="name">Paul</h1>
+            <h1 id="middle" className="name">Bodner</h1>
+            <h1 id="last" className="name">Developement</h1>              
+          </div>
           <div className="menu-button-container">
             <CSSTransition
             in={ showMenu }
