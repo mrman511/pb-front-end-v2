@@ -1,3 +1,4 @@
+import { useSlotProps } from '@mui/base';
 import React, { useEffect, useState } from 'react';
 import chevron from '../images/chevron.png'
 
@@ -5,8 +6,8 @@ import ProjectItem from './ProjectItem';
 
 // import { projectsData } from '../dev-profile-data'
 
-export default function ProjectList(){
-
+export default function ProjectList(props){
+  // props.setPage('PROJECTS')
   const [showProject, setShowProject] = useState(0)
 
   // let { projectsData } = require('../dev-profile-data')

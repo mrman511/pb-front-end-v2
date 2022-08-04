@@ -7,7 +7,7 @@ $darkBackgroundFontColor: rgb(197, 197, 197);
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: blue;
+  background-color: #0000ff;
   opacity: 0;
   z-index: 1;
 
@@ -15,15 +15,17 @@ $darkBackgroundFontColor: rgb(197, 197, 197);
     width: 100%;
     height: 66%;
     padding: 0;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-  }
 
-  a {
-    font-size: 1.777em;
-    color: $darkBackgroundFontColor;
+    .page-link {
+      font-size: 1.777em;
+      color: $darkBackgroundFontColor;
+      cursor: pointer;
+    }
   }
 
   .profile-links{
@@ -32,8 +34,10 @@ $darkBackgroundFontColor: rgb(197, 197, 197);
     justify-content: space-evenly;
     
     .icon {
-      height: 2em;
+      height: 3em;
+      cursor: pointer;
     }
+
   }
 }
 
@@ -52,6 +56,21 @@ $darkBackgroundFontColor: rgb(197, 197, 197);
     z-index: 1;
 
     background-color: rgba(0, 0, 0, 0.513);
+
+    .nav-list {
+      height: 60%;
+      max-height: 300px;
+    }
+
+    .profile-links{
+      height: 30%;
+      flex-direction: column;
+      align-items: center;
+
+      .icon {
+        height: (1.333 * 1.33333)em;
+      }
+    }
   }
 }
 

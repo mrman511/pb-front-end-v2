@@ -71,17 +71,35 @@ nav {
   .title {
     grid-area: title;
     align-self: center;
-    padding-left: 10%;
     margin: 0;
-    width: 150px;
+    width: 100%;
+
+    
+    .name{
+      margin: 0;
+      font-size: 28px;
+    }
+
+    #first{
+      margin-left: 7.49%;
+    }
+
+    #middle{
+      margin-left: 9.99%;
+    }
+
+    #last{
+      margin-left: 17.7%;
+    }
   }
+  
 
   .menu-button-container{
     grid-area: button;
-    width: 100%;
+    width: 85%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
 }
 
@@ -151,7 +169,7 @@ nav {
   justify-content: space-evenly;
 }
 
-.project-info{
+.info-section{
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -208,6 +226,24 @@ nav {
 ///////////////
 
 //projects
+@media only screen and (min-width: 650px){
+
+  .banner {
+
+    .menu-button-container{
+      width: 100%;
+      justify-content: center;
+    }
+
+    .title{
+      
+      .name {
+        font-size: 38px;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 750px){
 
   .project-info {
