@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+@mixin scrollAnimation($name, $direction){
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-name: $name;
+
+  @if $direction == reverse{
+    animation-direction: reverse;
+  }
+}
+
+/////////////////////////
+// next scroll key frames
+/////////////////////////
+
+@keyframes nextOutsideLeft {
+  0% { @include scrollbarOutsideLeft(); }
+  100% { @include scrollbarHiddenLeft(); }
+}
+
+@keyframes nextInsideLeft {
+  0% { @include scrollbarInsideLeft(); }
+  100% { @include scrollbarOutsideLeft(); }
+}
+
+@keyframes nextMiddle {
+  0% { @include scrollbarMiddle(); }
+  100% { @include scrollbarInsideLeft(); }
+}
+
+@keyframes nextInsideRight {
+  0% { @include scrollbarInsideRight(); }
+  100% { @include scrollbarMiddle(); }
+}
+
+@keyframes nextOutsideRight {
+  0% { @include scrollbarOutsideRight(); }
+  100% { @include scrollbarInsideRight(); }
+}
+
+@keyframes nextHiddenRight {
+  0% { @include scrollbarHiddenRight(); }
+  100% { @include scrollbarOutsideRight(); }
+}

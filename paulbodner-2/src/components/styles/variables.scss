@@ -1,0 +1,63 @@
+// set one
+// menu and projects
+$darkBackgroundFontColor: #c5c5c5;
+
+$darkTransparentBackground: #00000083;
+
+$shadingOpacity: .85;
+
+$baseScrollItemDiameter: 5px;
+$increase: 1.8;
+
+@mixin scrollBarPositioning($leftMargin, $rightMargin){
+  left: 0;
+  right: 0;
+  margin-left: $leftMargin;
+  margin-right: $rightMargin;
+  transform: translateX(-50%);
+}
+
+@mixin hidden(){
+  height: ($baseScrollItemDiameter)/$increase ;
+  width: ($baseScrollItemDiameter)/$increase;
+  opacity: 0;
+}
+
+@mixin inside(){
+  height: ($baseScrollItemDiameter)*$increase;
+  width: ($baseScrollItemDiameter)*$increase;
+}
+
+@mixin scrollbarHiddenLeft() {
+  @include scrollBarPositioning(0%, 100%);
+  @include hidden();
+}
+
+@mixin scrollbarOutsideLeft {
+  @include scrollBarPositioning(16.6%, 83.3%);
+}
+
+@mixin scrollbarInsideLeft {
+  @include scrollBarPositioning(33.3%, 66.6%);
+  @include inside();
+}
+
+@mixin scrollbarMiddle{
+  @include scrollBarPositioning(50%, 50%);
+  height: ($baseScrollItemDiameter)*($increase*$increase);
+  width: ($baseScrollItemDiameter)*($increase*$increase);
+}
+
+@mixin scrollbarInsideRight {
+  @include scrollBarPositioning(66.6%, 33.3%);
+  @include inside();
+}
+
+@mixin scrollbarOutsideRight {
+  @include scrollBarPositioning(83.3%, 16.6%);
+}
+
+@mixin scrollbarHiddenRight() {
+  @include scrollBarPositioning(100%, 0%);
+  @include hidden();
+}
