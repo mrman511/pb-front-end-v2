@@ -28,8 +28,6 @@
   b {
     background-color: $darkBackgroundFontColor;
     border-radius: 50%;
-    width: 5px;
-    height: 5px;
     position: absolute;
   }
 
@@ -53,11 +51,11 @@
       
       &__outside{
         &--left{
-          @include scrollbarOutsideLeft();          
+          @include scrollbarOutsideLeft();
         }
         
         &--right{
-          @include scrollbarOutsideRight();          
+          @include scrollbarOutsideRight();
         }
       }
       
@@ -102,37 +100,33 @@
   .scroll-item{
       
     &__hidden {
-      &--left{
-
-      }
-      
       &--right{
-        @include scrollAnimation(nextHiddenRight, normal);
+        @include scrollAnimation(scrollHiddenRight, normal);
       }
     }
     
     &__outside{
       &--left{
-        @include scrollAnimation(nextOutsideLeft, normal);
+        @include scrollAnimation(scrollOutsideLeft, normal);
       }
       
       &--right{
-        @include scrollAnimation(nextOutsideRight, normal);
+        @include scrollAnimation(scrollOutsideRight, normal);
       }
     }
     
     &__inside{
       &--left{
-        @include scrollAnimation(nextInsideLeft, normal);
+        @include scrollAnimation(scrollInsideLeft, normal);
       }
       
       &--right{
-        @include scrollAnimation(nextInsideRight, normal);
+        @include scrollAnimation(scrollInsideRight, normal);
       }
     }
     
     &__middle{
-      @include scrollAnimation(nextMiddle, normal);
+      @include scrollAnimation(scrollMiddle, normal);
     }
   }
 }
@@ -141,37 +135,33 @@
   .scroll-item{
       
     &__hidden {
-      &--left{
-
-      }
-      
       &--right{
-        @include scrollAnimation(nextHiddenRight, reverse);
+        @include scrollAnimation(scrollHiddenRight, reverse);
       }
     }
     
     &__outside{
       &--left{
-        @include scrollAnimation(nextOutsideLeft, reverse);
+        @include scrollAnimation(scrollOutsideLeft, reverse);
       }
       
       &--right{
-        @include scrollAnimation(nextOutsideRight, reverse);
+        @include scrollAnimation(scrollOutsideRight, reverse);
       }
     }
     
     &__inside{
       &--left{
-        @include scrollAnimation(nextInsideLeft, reverse);
+        @include scrollAnimation(scrollInsideLeft, reverse);
       }
       
       &--right{
-        @include scrollAnimation(nextInsideRight, reverse);
+        @include scrollAnimation(scrollInsideRight, reverse);
       }
     }
     
     &__middle{
-      @include scrollAnimation(nextMiddle, reverse);
+      @include scrollAnimation(scrollMiddle, reverse);
     }
   }
 }

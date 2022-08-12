@@ -15,32 +15,32 @@
 // next scroll key frames
 /////////////////////////
 
-@keyframes nextOutsideLeft {
+@keyframes scrollOutsideLeft {
   0% { @include scrollbarOutsideLeft(); }
   100% { @include scrollbarHiddenLeft(); }
 }
 
-@keyframes nextInsideLeft {
+@keyframes scrollInsideLeft {
   0% { @include scrollbarInsideLeft(); }
   100% { @include scrollbarOutsideLeft(); }
 }
 
-@keyframes nextMiddle {
+@keyframes scrollMiddle {
   0% { @include scrollbarMiddle(); }
   100% { @include scrollbarInsideLeft(); }
 }
 
-@keyframes nextInsideRight {
+@keyframes scrollInsideRight {
   0% { @include scrollbarInsideRight(); }
   100% { @include scrollbarMiddle(); }
 }
 
-@keyframes nextOutsideRight {
+@keyframes scrollOutsideRight {
   0% { @include scrollbarOutsideRight(); }
   100% { @include scrollbarInsideRight(); }
 }
 
-@keyframes nextHiddenRight {
+@keyframes scrollHiddenRight {
   0% { @include scrollbarHiddenRight(); }
   100% { @include scrollbarOutsideRight(); }
 }
