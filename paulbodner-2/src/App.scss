@@ -1,4 +1,4 @@
-$darkBackgroundFontColor: rgb(197, 197, 197);
+@import './components/styles/variables.scss';
 
 h1 {
   font-size: 90px;
@@ -44,7 +44,7 @@ article{
 }
 
 nav {
-  background-color: rgba(0, 0, 0, 0.513);
+  background-color: $darkTransparentBackground;
   z-index: 1;
   color: $darkBackgroundFontColor;
 
@@ -134,7 +134,7 @@ nav {
 }
 
 .hide-title-exit-active {
-  background-color: rgba(0, 0, 0, 0.513);
+  background-color: $darkTransparentBackground;
   transition: background-color 750ms linear;
 
   .title{
@@ -144,7 +144,7 @@ nav {
 }
 
 .hide-title-exit-done {
-  background-color: rgba(0, 0, 0, 0.513);
+  background-color: $darkTransparentBackground;
 
   .title{
     opacity: 1;
@@ -167,6 +167,13 @@ nav {
   color: $darkBackgroundFontColor;
   display: flex;
   justify-content: space-evenly;
+
+}
+
+.project-info{
+  display: flex;
+  flex-direction: column;
+  width: 66%;
 }
 
 .info-section{
@@ -175,27 +182,7 @@ nav {
   width: 60%;
 }
 
-.project-switch {
-  position: absolute;
-  width: 1.33em;
-  
-  
-  img {
-    width: 80%;
-    height: 200px;
-    opacity: .5;
-  }
 
-}
-
-#next {
-  left: 93%;
-}
-
-#previous {
-  transform: rotate(180deg);
-  left: 5%
-}
 
 .project-switch:hover{
   cursor: pointer;
