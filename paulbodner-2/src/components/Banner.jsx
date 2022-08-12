@@ -2,6 +2,7 @@ import React from "react";
 import { CSSTransition } from 'react-transition-group';
 
 import './styles/menu-button.scss';
+import pbLogo from '../images/pb-logo.png';
 
 
 export default function Banner(props){
@@ -15,7 +16,7 @@ export default function Banner(props){
     timeout={ 750 }
     >
       <nav className="banner">
-          <h1 className="logo" >B</h1>
+          <img className="logo" src={ pbLogo }  />
           <div className="title">
             <h1 id="first" className="name">Paul</h1>
             <h1 id="middle" className="name">Bodner</h1>

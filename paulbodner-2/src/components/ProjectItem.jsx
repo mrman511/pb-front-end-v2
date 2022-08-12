@@ -14,6 +14,12 @@ export default function ProjectItem(props) {
     );
   });
 
+  // if (props.transitionGroup){
+  //   console.log("ITEM ID", props.title)
+  //   console.log("PROPS: ", props)
+  //   console.log("TRANSITION GROUP", props.transitionGroup)
+  // }
+
   
   return (
     <article className='page' style={{ backgroundImage: "url(" + require(`../images/${ props.imagePath }${ mobileBackGround ? '-mobile': ''}.png`) +")" }}>

@@ -23,22 +23,29 @@ $increase: 1.8;
   opacity: 0;
 }
 
+@mixin outside(){
+  height: $baseScrollItemDiameter;
+  width: $baseScrollItemDiameter;
+  opacity: 1;
+}
+
 @mixin inside(){
-  height: ($baseScrollItemDiameter)*$increase;
-  width: ($baseScrollItemDiameter)*$increase;
+  height: ($baseScrollItemDiameter)*($increase);
+  width: ($baseScrollItemDiameter)*($increase);
 }
 
 @mixin scrollbarHiddenLeft() {
-  @include scrollBarPositioning(0%, 100%);
+  @include scrollBarPositioning(10%, 90%);
   @include hidden();
 }
 
 @mixin scrollbarOutsideLeft {
+  @include outside();
   @include scrollBarPositioning(16.6%, 83.3%);
 }
 
 @mixin scrollbarInsideLeft {
-  @include scrollBarPositioning(33.3%, 66.6%);
+  @include scrollBarPositioning(30%, 70%);
   @include inside();
 }
 
@@ -49,15 +56,16 @@ $increase: 1.8;
 }
 
 @mixin scrollbarInsideRight {
-  @include scrollBarPositioning(66.6%, 33.3%);
+  @include scrollBarPositioning(70%, 30%);
   @include inside();
 }
 
 @mixin scrollbarOutsideRight {
+  @include outside();
   @include scrollBarPositioning(83.3%, 16.6%);
 }
 
 @mixin scrollbarHiddenRight() {
-  @include scrollBarPositioning(100%, 0%);
+  @include scrollBarPositioning(90%, 10%);
   @include hidden();
 }
