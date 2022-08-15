@@ -29,7 +29,7 @@ export default function ProjectItem(props) {
 
   
   return (
-    <article className='page' style={{ backgroundImage: "url(" + require(`../images/${ props.imagePath }${ mobileBackGround ? '-mobile': ''}.png`) +")" }}>
+    <article className='page' style={{ backgroundImage: "url(" + require(`../images/projects/${ props.imagePath }${ mobileBackGround ? '-mobile': ''}.png`) +")" }}>
       <div className='page shading'>
         <div className='main project'>
           <div className='project-info'>
@@ -51,8 +51,8 @@ export default function ProjectItem(props) {
             </div>
           </div>
 
-          { isMobile && <a href={ props.liveLink } className='image-container'>
-            <img src={ require(`../images/${props.imagePath}-mobile.png`) } alt="" />
+          { isMobile && <a href={ props.liveLink } target="_blank" className='image-container'>
+            <img src={ require(`../images/projects/${props.imagePath}-mobile.png`) } alt="" />
           </a> }
         </div>
       </div>
