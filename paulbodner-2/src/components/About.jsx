@@ -40,9 +40,9 @@ export default function About(props){
 
           <h5 >A full stack developer from Vancouver, Canada</h5>
 
-          <div className='cloud-contianer'>
+          {/* <div className='cloud-contianer'>
             < TagCloud minSize={ 12 } maxSize={35} tags={ skills }/>
-          </div>
+          </div> */}
 
         </div>
       </div>
