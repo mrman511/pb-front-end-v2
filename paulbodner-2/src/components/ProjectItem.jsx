@@ -1,15 +1,22 @@
 import React from "react";
 import { useMediaQuery } from "@mui/material";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub,   } from '@fortawesome/fontawesome-free-brands';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function ProjectItem(props) {
+  
   const isMobile = useMediaQuery('(min-width:750px)');
   const mobileBackGround = useMediaQuery('(max-width:650px)');
 
+
+  console.log('ICON LIST: ', props);
   let parsedIconList = props.iconList.map((icon) => {
     return (
       <div className="icon-container">
-        <img src={ require(`../images/${icon}-icon.png`) } alt={icon} className='icon'/>
+        <img src={ require(`../images/icons/${icon.image_path_name}-icon.png`) } alt={icon.title} className='icon'/>
       </div>
     );
   });
@@ -30,15 +37,23 @@ export default function ProjectItem(props) {
             <p>
               { props.description }
             </p>
-            <h6>Created Using</h6>
-            <div className='project-icons'>
-              { parsedIconList }
+            <div className='project-links'>
+            <h6>Site Links:</h6>
+              
+            <a href={ props.liveLink } target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={ faGlobe } className='icon' />
+            </a>
+
+            <a href={ props.github } target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={ faGithub } className='icon' />
+            </a>
+              
             </div>
           </div>
 
-          { isMobile && <div className='image-container'>
+          { isMobile && <a href={ props.liveLink } className='image-container'>
             <img src={ require(`../images/${props.imagePath}-mobile.png`) } alt="" />
-          </div> }
+          </a> }
         </div>
       </div>
     </article>

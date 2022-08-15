@@ -13,7 +13,7 @@ import { useSlotProps } from '@mui/base';
 
 
 export default function Fullpage(props) {
-  const { moveTo, getApi } = props
+  const { moveTo, getApi, projectsData, showProjects } = props
 
   return (
     <ReactFullpage
@@ -35,7 +35,7 @@ export default function Fullpage(props) {
           </div>
 
           <div className="section projects" >
-            <ProjectList setPage={ props.setPage }/>
+            <ProjectList setPage={ props.setPage } projectsData = { projectsData } />
           </div>
 
           <div className="section contact-me" >

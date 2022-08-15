@@ -17,6 +17,21 @@ $increase: 1.8;
   transform: translateX(-50%);
 }
 
+@mixin scrollArrow($direction){
+  @if $direction == next {
+    transform: translateX(-100%);
+    margin-left: 100%;
+    margin-right: 0;
+  }
+
+  @if $direction == previous {
+    transform: translateX(100%);
+    margin-left: 0;
+    margin-right: 0;
+    transform: rotate(180deg);
+  }
+}
+
 @mixin hidden(){
   height: ($baseScrollItemDiameter)/$increase ;
   width: ($baseScrollItemDiameter)/$increase;
