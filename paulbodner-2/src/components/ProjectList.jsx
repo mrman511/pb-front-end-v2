@@ -11,14 +11,13 @@ import chevron from '../images/chevron.png'
 // import { projectsData } from '../dev-profile-data'
 
 //delete later
-import { projectsData, parsedProjects, parseProjects } from '../helpers/parseProjects';
+import { parsedProjects, parseProjects } from '../helpers/parseProjects';
 
 export default function ProjectList(props){
   // props.setPage('PROJECTS')
+  const { projectsData, showProjects } = props
   const [showProject, setShowProject] = useState(0);
   const [scroll, setScroll] = useState('CURRENT');
-
-  console.log("SHOWPROJECT: ", showProject)
   const parsedProjects = parseProjects(projectsData, showProject);
   
   function changeProject(bool){

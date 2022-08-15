@@ -16,12 +16,15 @@
 
 .project-scroll-bar{
   position: absolute;
-  width: 33%;
-  min-width: 300px;
+  width: 33vw;
+  min-width: 200px;
   max-width: 350px;
   height: 2em;
   top: 90%;
-  left: 33%;
+  left: 0;
+  right: 0;
+  transform: translateX(33vw);
+  
   display: flex;
   align-items: center;
 
@@ -82,12 +85,11 @@
     cursor: pointer;
     
     &__previous{
-      @include scrollBarPositioning(0%, 100%); 
-      transform: rotate(180deg);
+      @include scrollArrow(previous); 
     }
 
     &__next{
-      @include scrollBarPositioning(100%, 0%);
+      @include scrollArrow(next);
     }
   }
 }
@@ -163,5 +165,11 @@
     &__middle{
       @include scrollAnimation(scrollMiddle, reverse);
     }
+  }
+}
+
+@media only screen and (min-width: 1000px){
+  .project-scroll-bar{
+    transform: translateX(40vw);
   }
 }
