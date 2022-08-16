@@ -51,6 +51,11 @@ nav {
   
 }
 
+.banner::before{
+  webkit-perspective:abs($number: 0); 
+  webkit-backface-visibility:none; 
+}
+
 .banner {
   grid-area: banner;
   display: grid;
@@ -61,8 +66,10 @@ nav {
   .logo {
     grid-area: logo;
     position: absolute;
-    justify-self: center;
-    align-self: center;
+    // justify-self: center;
+    // align-self: center;
+    left: 5%;
+    top: 1vh;
     margin: 0;
   
     height: 100px;

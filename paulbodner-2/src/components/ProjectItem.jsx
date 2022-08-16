@@ -11,8 +11,6 @@ export default function ProjectItem(props) {
   const isMobile = useMediaQuery('(min-width:750px)');
   const mobileBackGround = useMediaQuery('(max-width:650px)');
 
-
-  console.log('ICON LIST: ', props);
   let parsedIconList = props.iconList.map((icon) => {
     return (
       <div className="icon-container">
@@ -20,12 +18,6 @@ export default function ProjectItem(props) {
       </div>
     );
   });
-
-  // if (props.transitionGroup){
-  //   console.log("ITEM ID", props.title)
-  //   console.log("PROPS: ", props)
-  //   console.log("TRANSITION GROUP", props.transitionGroup)
-  // }
 
   
   return (

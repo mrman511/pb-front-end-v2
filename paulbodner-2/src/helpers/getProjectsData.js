@@ -11,7 +11,6 @@ async function icons(project) {
 }
 
 export function getProjectsIcons(projectsData, setProjectsData){
-  console.log('INSIDE GET ICONS');
   const projectsArray = [];
   const promises = [];
 
@@ -24,7 +23,6 @@ export function getProjectsIcons(projectsData, setProjectsData){
       projectsData[i].iconList = response[i].data;
       projectsArray.push(projectsData[i]);
     } 
-    console.log('PROJECTS ARRAY: ', projectsArray)
     setProjectsData(projectsArray);
   })
 }
