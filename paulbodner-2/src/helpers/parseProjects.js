@@ -19,7 +19,6 @@ export const subData = [
 ];
 
 export function parseProjects(projectsData, currentItem) {
-  console.log("PROJECTS: ", projectsData)
   const parsedProjects = projectsData.map((project) =>
     <ProjectItem 
     key={ project['id'] }

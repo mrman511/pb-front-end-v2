@@ -14,7 +14,6 @@ import chevron from '../images/chevron.png'
 import { parsedProjects, parseProjects } from '../helpers/parseProjects';
 
 export default function ProjectList(props){
-  // props.setPage('PROJECTS')
   const { projectsData, showProjects } = props
   const [showProject, setShowProject] = useState(0);
   const [scroll, setScroll] = useState('CURRENT');

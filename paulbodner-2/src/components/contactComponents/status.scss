@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 .lds-grid {
   position: relative;
   width: 100%;
@@ -8,7 +10,7 @@
     width: 10%;
     height: 10%;
     border-radius: 45%;
-    background: rgb(0, 219, 135);
+    background: $contactBackground;
     animation: lds-grid 1.5s linear infinite;
   }
 
@@ -60,7 +62,7 @@
 }
 @keyframes lds-grid {
   50% {
-    background: rgb(252, 255, 66);
+    background: $darkBackgroundFontColor;
   }
   25%, 75% {
     opacity: 0.5;

@@ -7,7 +7,8 @@ import pbLogo from '../images/pb-logo.png';
 
 export default function Banner(props){
 
-  const { toggleMenu, showMenu } = props;
+  const { toggleMenu, showMenu } = props
+
 
   return (
     <CSSTransition
