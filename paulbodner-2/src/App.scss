@@ -1,5 +1,10 @@
 @import './components/styles/variables.scss';
 
+
+body {
+  font-family: $secondayFont;
+}
+
 h1 {
   font-size: 90px;
 }
@@ -59,20 +64,19 @@ nav {
 .banner {
   grid-area: banner;
   display: grid;
-  grid-template: auto/ 15%  auto  150px;
-  grid-template-areas: "logo title button";
+  grid-template: auto/ auto  150px;
+  grid-template-areas: "title button";
   z-index: 2;
   
   .logo {
+    display: none;
     grid-area: logo;
     position: absolute;
-    // justify-self: center;
-    // align-self: center;
-    left: 5%;
-    top: 1vh;
+    left: 2.5vw;
+    top: 1.5vh;
     margin: 0;
   
-    height: 100px;
+    height: 17%;
     margin-left: 10px;
   }
 
@@ -97,6 +101,7 @@ nav {
     }
 
     #last{
+      font-family: $secondayFont;
       margin-left: 17.7%;
     }
   }
@@ -197,7 +202,11 @@ nav {
 }
 
 .image-container{
-  width: 33%;
+  margin-top: 2em;
+  width: 25vw;
+  height: 31.25vw;
+  min-width: 295px;
+  min-height: 368.75px;
 
   img{
     width: 100%;
@@ -233,6 +242,18 @@ nav {
 ///////////////
 
 //projects
+@media only screen and (min-width: 500px){
+  .banner {
+    grid-template: auto/ 15%  auto  150px;
+    grid-template-areas: "logo title button";
+
+    .logo{
+      display: block;
+      left: 5vw;
+    }
+  }
+}
+
 @media only screen and (min-width: 650px){
 
   .banner {
@@ -247,11 +268,6 @@ nav {
       .name {
         font-size: 38px;
       }
-    }
-
-    .logo {
-      height: 130px;
-      margin: 0;
     }
   }
 }
